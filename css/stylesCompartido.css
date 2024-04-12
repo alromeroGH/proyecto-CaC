@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'MadimiOne';
+    src: url(../fonts/MadimiOne-Regular/MadimiOne-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    background-color: rgb(209, 76, 24);
+    width: 100%;
+    margin: 0;
+    padding: 1%;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    flex-direction: row;
+    z-index: 1;
+}
+
+.logo a img{
+    width: 35px;
+    height: 35px;
+}
+
+.logo:hover{
+    transform: rotate(30deg);
+    transition: all 0.5s ease;
+}
+
+ul li{
+    display: inline-block;
+    padding-inline: 10px;
+    list-style: none;
+    font-size: 15px;
+    padding-top: 5px;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    font-family: 'MadimiOne';
+}
+
+button{
+    background-color: rgb(209, 76, 24);
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    transition: all 0.5s ease;
+}
+
+button:hover{
+    transform: scale(1.1,1.1);
+}
+
+.boton2{
+    background-color: rgb(236, 214, 216);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.boton2 a:hover{
+    color: rgb(209, 76, 24);
+    transition: all 0.7s ease;
+}
+
+.container-footer{
+    background-color: rgb(209, 76, 24);
+    display: flex;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding: 1%;
+    justify-content: center;
+}
