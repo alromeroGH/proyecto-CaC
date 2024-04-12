@@ -8,29 +8,48 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-.container{
-    background-color: rgb(209, 76, 24);
-    width: 100%;
-    margin: 0;
-    padding: 1%;
-    display: flex;
-    justify-content: space-around;
-    position: fixed;
-    flex-direction: row;
-    z-index: 1;
+/* BreakPoint de la barra de navegación para pantallas de pc */
+@media (min-width: 576px) {
+    .container{
+        background-color: rgb(209, 76, 24);
+        width: 100%;
+        margin: 0;
+        padding: 1%;
+        display: flex;
+        justify-content: space-around;
+        position: fixed;
+        flex-direction: row;
+        z-index: 1;
+    }
 }
-
+/* BreakPoint de la barra de navegación para pantallas de movil */
+@media (max-width: 576px) {
+    .logo{
+        background-color: rgb(209, 76, 24);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 1%;
+    }
+    .navbar{
+        background-color: rgb(209, 76, 24);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 1%;
+    }
+}
+/* ajusta tamaño logo de navbar */
 .logo a img{
     width: 35px;
     height: 35px;
 }
-
-.logo:hover{
+/* animación logo navbar */
+.logo a img:hover{
     transform: rotate(30deg);
     transition: all 0.5s ease;
 }
-
+/* se pone las listas en linea y se les quita los puntos */
 ul li{
     display: inline-block;
     padding-inline: 10px;
@@ -38,13 +57,13 @@ ul li{
     font-size: 15px;
     padding-top: 5px;
 }
-
+/* se cambia color hipervinculos y se quita la barra que tiene debajo */
 a{
     color: black;
     text-decoration: none;
     font-family: 'MadimiOne';
 }
-
+/* se le pone a los botones el mismo color que las barras, se quita el borde y se le da radio */
 button{
     background-color: rgb(209, 76, 24);
     border: none;
@@ -52,28 +71,43 @@ button{
     padding: 5px;
     transition: all 0.5s ease;
 }
-
+/* agranda un poco los botones al poner el cursos sobre ellos */
 button:hover{
     transform: scale(1.1,1.1);
 }
-
+/* estilo distinto a otros botones */
 .boton2{
     background-color: rgb(236, 214, 216);
     border-radius: 5px;
     padding: 5px;
 }
-
+/* al poner el cursor sobre el boton cambia color de texto */
 .boton2 a:hover{
     color: rgb(209, 76, 24);
     transition: all 0.7s ease;
 }
-
-.container-footer{
-    background-color: rgb(209, 76, 24);
-    display: flex;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    padding: 1%;
-    justify-content: center;
+/* BreakPoint del footer para pantallas de pc */
+@media (min-width: 576px) {
+    .container-footer{
+        background-color: rgb(209, 76, 24);
+        display: flex;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        padding: 1%;
+        justify-content: center;
+    }
+}
+/* BreakPoint del footer para pantallas de movil */
+@media (max-width: 576px) {
+    .container-footer ul{
+        background-color: rgb(209, 76, 24);
+        display: flex;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        padding: 1%;
+        flex-direction: column;
+        align-items: center;
+    }
 }
