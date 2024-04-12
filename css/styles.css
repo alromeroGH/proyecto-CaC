@@ -7,23 +7,24 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'MadimiOne';
 }
 /* BreakPoint de la barra de navegación para pantallas de pc */
-@media (min-width: 576px) {
+@media (min-width: 640px) {
     .container{
         background-color: rgb(209, 76, 24);
         width: 100%;
         margin: 0;
         padding: 1%;
+        position: relative;
         display: flex;
         justify-content: space-around;
-        position: fixed;
         flex-direction: row;
-        z-index: 1;
+        z-index: 1000;
     }
 }
 /* BreakPoint de la barra de navegación para pantallas de movil */
-@media (max-width: 576px) {
+@media (max-width: 640px) {
     .logo{
         background-color: rgb(209, 76, 24);
         width: 100%;
@@ -41,8 +42,8 @@
 }
 /* ajusta tamaño logo de navbar */
 .logo a img{
-    width: 35px;
-    height: 35px;
+    width: 50px;
+    height: 50px;
 }
 /* animación logo navbar */
 .logo a img:hover{
@@ -52,23 +53,23 @@
 /* se pone las listas en linea y se les quita los puntos */
 ul li{
     display: inline-block;
-    padding-inline: 10px;
+    padding-inline: 20px;
     list-style: none;
-    font-size: 15px;
     padding-top: 5px;
 }
 /* se cambia color hipervinculos y se quita la barra que tiene debajo */
 a{
-    color: black;
+    color: white;
+    font-size: 20px;
     text-decoration: none;
-    font-family: 'MadimiOne';
+    padding: 10px;
 }
 /* se le pone a los botones el mismo color que las barras, se quita el borde y se le da radio */
 button{
     background-color: rgb(209, 76, 24);
     border: none;
     border-radius: 5px;
-    padding: 5px;
+    padding: 10px;
     transition: all 0.5s ease;
 }
 /* agranda un poco los botones al poner el cursos sobre ellos */
@@ -77,7 +78,7 @@ button:hover{
 }
 /* estilo distinto a otros botones */
 .boton2{
-    background-color: rgb(236, 214, 216);
+    background-color: rgb(12, 8, 7);
     border-radius: 5px;
     padding: 5px;
 }
@@ -91,7 +92,7 @@ button:hover{
     .container-footer{
         background-color: rgb(209, 76, 24);
         display: flex;
-        position: fixed;
+        position: static;
         width: 100%;
         bottom: 0;
         padding: 1%;
@@ -103,11 +104,33 @@ button:hover{
     .container-footer ul{
         background-color: rgb(209, 76, 24);
         display: flex;
-        position: fixed;
+        position: static;
         width: 100%;
         bottom: 0;
         padding: 1%;
         flex-direction: column;
         align-items: center;
     }
+}
+
+#introduccion{
+    background-image: url(../imagenes/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    min-height: 95vh;
+}
+
+#introduccion h1{
+    color: white;
+    font-size: 70px;
+}
+
+#introduccion p{
+    color: white;
+    font-size: 40px;
+    margin: 1%;
 }
