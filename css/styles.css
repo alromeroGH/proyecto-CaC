@@ -239,6 +239,7 @@ hr {
 #tendencias div a img {
     border-radius: 10px;
     width: 300px;
+    padding: 20px;
 }
 
 /* Efecto de desenfoque y reducción de tamaño al pasar el cursor sobre las imágenes de #tendencias */
