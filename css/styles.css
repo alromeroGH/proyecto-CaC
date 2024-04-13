@@ -9,8 +9,9 @@
     box-sizing: border-box;
     font-family: 'MadimiOne';
 }
-/* BreakPoint de la barra de navegación para pantallas de pc */
+
 @media (min-width: 640px) {
+/* BreakPoint de la barra de navegación para pantallas de pc */
     .container{
         background-color: rgb(209, 76, 24);
         width: 100%;
@@ -22,9 +23,19 @@
         flex-direction: row;
         z-index: 1000;
     }
+    .container-footer{
+        background-color: rgb(209, 76, 24);
+        display: flex;
+        position: static;
+        width: 100%;
+        bottom: 0;
+        padding: 1%;
+        justify-content: center;
+    }
 }
-/* BreakPoint de la barra de navegación para pantallas de movil */
+
 @media (max-width: 640px) {
+    /* BreakPoint de la barra de navegación para pantallas de movil */
     .logo{
         background-color: rgb(209, 76, 24);
         width: 100%;
@@ -38,6 +49,17 @@
         display: flex;
         justify-content: center;
         padding: 1%;
+    }
+    /* BreakPoint del footer para pantallas de movil */
+    .container-footer ul{
+        background-color: rgb(209, 76, 24);
+        display: flex;
+        position: static;
+        width: 100%;
+        bottom: 0;
+        padding: 1%;
+        flex-direction: column;
+        align-items: center;
     }
 }
 /* ajusta tamaño logo de navbar */
@@ -86,31 +108,6 @@ button:hover{
 .boton2 a:hover{
     color: rgb(209, 76, 24);
     transition: all 0.7s ease;
-}
-/* BreakPoint del footer para pantallas de pc */
-@media (min-width: 576px) {
-    .container-footer{
-        background-color: rgb(209, 76, 24);
-        display: flex;
-        position: static;
-        width: 100%;
-        bottom: 0;
-        padding: 1%;
-        justify-content: center;
-    }
-}
-/* BreakPoint del footer para pantallas de movil */
-@media (max-width: 576px) {
-    .container-footer ul{
-        background-color: rgb(209, 76, 24);
-        display: flex;
-        position: static;
-        width: 100%;
-        bottom: 0;
-        padding: 1%;
-        flex-direction: column;
-        align-items: center;
-    }
 }
 
 main{
