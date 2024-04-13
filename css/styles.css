@@ -1,18 +1,22 @@
+/* Definición de la fuente personalizada 'MadimiOne' */
 @font-face {
     font-family: 'MadimiOne';
     src: url(../fonts/MadimiOne-Regular/MadimiOne-Regular.ttf);
 }
 
-*{
+/* Estilos globales */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'MadimiOne';
 }
 
+/* Media queries para estilos responsivos */
 @media (min-width: 640px) {
-/* BreakPoint de la barra de navegación para pantallas de pc */
-    .container{
+    /* Estilos para pantallas de PC */
+    .container {
+        /* Estilos de la barra de navegación */
         background-color: rgb(209, 76, 24);
         width: 100%;
         margin: 0;
@@ -23,8 +27,8 @@
         flex-direction: row;
         z-index: 1000;
     }
-    /* BreakPoint del footer para pantallas de movil */
-    .container-footer{
+    /* Estilos para el footer */
+    .container-footer {
         background-color: rgb(209, 76, 24);
         display: flex;
         position: static;
@@ -33,52 +37,54 @@
         padding: 1%;
         justify-content: center;
     }
-    /* Breakpoint para ampliar la barra de busqueda */
-    #buscador form input{
+    /* Estilos para el formulario de búsqueda en la barra de navegación */
+    #buscador form input {
         width: 500px;
         padding: 15px;
         border: none;
         border-radius: 30px;
     }
-    /* se cambia color hipervinculos y se quita la barra que tiene debajo, aumenta tamaño letra para pc */
-    a{
-      color: white;
-     font-size: 20px;
-      text-decoration: none;
+    /* Estilos para los hipervínculos */
+    a {
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
     }
-    /* se le pone a los botones el mismo color que las barras, se quita el borde y se le da radio, se aumenta el tamaño en pc */
-    button{
+    /* Estilos para los botones */
+    button {
         background-color: rgb(209, 76, 24);
         border: none;
         border-radius: 5px;
         padding: 10px;
         transition: all 0.5s ease;
     }
-
-    #aclamadas div img{
+    /* Estilos para las imágenes dentro de #aclamadas */
+    #aclamadas div img {
         padding: 30px;
         border-radius: 50px;
     }
 }
 
 @media (max-width: 640px) {
-    /* BreakPoint de la barra de navegación para pantallas de movile */
-    .logo{
+    /* Estilos para pantallas de dispositivos móviles */
+    .logo {
+        /* Estilos del logo en la barra de navegación */
         background-color: rgb(209, 76, 24);
         width: 100%;
         display: flex;
         justify-content: center;
         padding-top: 1%;
     }
-    .navbar{
+    .navbar {
+        /* Estilos de la barra de navegación */
         background-color: rgb(209, 76, 24);
         width: 100%;
         display: flex;
         justify-content: center;
         padding: 1%;
     }
-    /* BreakPoint del footer para pantallas de movile */
-    .container-footer ul{
+    /* Estilos para el footer en dispositivos móviles */
+    .container-footer ul {
         background-color: rgb(209, 76, 24);
         display: flex;
         position: static;
@@ -88,90 +94,96 @@
         flex-direction: column;
         align-items: center;
     }
-    /* Breakpoint para achicar la barra de busqueda */
-    #buscador form input{
+    /* Estilos para el formulario de búsqueda en dispositivos móviles */
+    #buscador form input {
         width: 300px;
         padding: 15px;
         border: none;
         border-radius: 30px;
     }
-    /* se cambia color hipervinculos y se quita la barra que tiene debajo, disminuye tamaño letra para movile */
-    .navbar a{
+    /* Estilos para los hipervínculos en dispositivos móviles */
+    .navbar a {
         color: white;
         font-size: 12px;
         text-decoration: none;
     }
-    a{
-        color: white;
-        font-size: 20px;
-        text-decoration: none;
-        padding: 4px;
-      }
-    /* se le pone a los botones el mismo color que las barras, se quita el borde y se le da radio, se disminuye el tamaño en movile */
-    button{
+    /* Estilos para los botones en dispositivos móviles */
+    button {
         background-color: rgb(209, 76, 24);
         border: none;
         border-radius: 5px;
         transition: all 0.5s ease;
     }
-
-    #aclamadas div img{
+    /* Estilos para las imágenes dentro de #aclamadas en dispositivos móviles */
+    #aclamadas div img {
         padding-right: 10px;
         border-radius: 50px;
         height: 230px;
         width: 180px;
     }
 }
-/* ajusta tamaño logo de navbar */
-.logo a img{
+
+/* Estilos adicionales */
+
+/* Ajuste de tamaño del logo en la barra de navegación */
+.logo a img {
     width: 50px;
     height: 50px;
 }
-/* animación logo navbar */
-.logo a img:hover{
+
+/* Animación para el logo en la barra de navegación */
+.logo a img:hover {
     transform: rotate(30deg);
     transition: all 0.5s ease;
 }
-/* se pone las listas en linea y se les quita los puntos */
-ul li{
+
+/* Estilos para las listas */
+ul li {
     display: inline-block;
     padding-inline: 20px;
     list-style: none;
     padding-top: 5px;
 }
-/* agranda un poco los botones al poner el cursos sobre ellos */
-button:hover{
-    transform: scale(1.1,1.1);
+
+/* Efecto de agrandamiento en botones al pasar el cursor sobre ellos */
+button:hover {
+    transform: scale(1.1, 1.1);
 }
-/* estilo distinto a otros botones */
-.boton2{
+
+/* Estilos específicos para el botón con clase .boton2 */
+.boton2 {
     background-color: rgb(12, 8, 7);
     border-radius: 5px;
     padding: 5px;
 }
-/* al poner el cursor sobre el boton cambia color de texto */
-.boton2 a:hover{
+
+/* Cambio de color de texto al pasar el cursor sobre el botón con clase .boton2 */
+.boton2 a:hover {
     color: rgb(209, 76, 24);
     transition: all 0.7s ease;
 }
 
-main{
+/* Estilos para el cuerpo de la página */
+body {
     background-color: rgb(24, 21, 20);
 }
 
-h2{
+/* Estilos para las etiquetas h2 */
+h2 {
     color: white;
     font-size: 40px;
 }
 
+/* Estilos para el hr (línea horizontal) */
 hr {
-    border: 0; 
-    height: 2px; 
-    background-color: rgb(209, 76, 24); 
+    border: 0;
+    height: 2px;
+    background-color: rgb(209, 76, 24);
     margin: 0px 50px;
 }
 
-#introduccion{
+/* Estilos para el contenedor con id "introduccion" */
+#introduccion {
     background-image: url(../imagenes/fondo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -182,18 +194,21 @@ hr {
     min-height: 100vh;
 }
 
-#introduccion h1{
+/* Estilos para las etiquetas h1 dentro de #introduccion */
+#introduccion h1 {
     color: white;
     font-size: 70px;
 }
 
-#introduccion p{
+/* Estilos para las etiquetas p dentro de #introduccion */
+#introduccion p {
     color: white;
     font-size: 40px;
     margin: 5px;
 }
 
-#buscador{
+/* Estilos para el contenedor con id "buscador" */
+#buscador {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -201,44 +216,47 @@ hr {
     min-height: 30vh;
 }
 
-#buscador form{
+/* Estilos adicionales para el formulario dentro de #buscador */
+#buscador form {
     margin-top: 20px;
 }
 
-#buscador form button{
+/* Estilos para el botón dentro del formulario en #buscador */
+#buscador form button {
     border: 1px solid white;
     border-radius: 30px;
     margin: 10px;
 }
-.nombre{
+
+/* Estilos para elementos con clase .nombre */
+.nombre {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#tendencias div a img{
+
+/* Estilos para las imágenes dentro de #tendencias */
+#tendencias div a img {
     border-radius: 10px;
     width: 300px;
 }
 
-#tendencias div a:hover{
+/* Efecto de desenfoque y reducción de tamaño al pasar el cursor sobre las imágenes de #tendencias */
+#tendencias div a:hover {
     filter: blur(10px);
-    transform: scale(0.9,0.9);
+    transform: scale(0.9, 0.9);
     transition: all 0.5s ease;
 }
 
-#tendencias .pelicula{
+/* Estilos para elementos con clase .pelicula */
+.pelicula {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.pelicula{
-    display: flex;
-    justify-content: center;
-    margin: 10px;
-}
-
-.peliculas{
+/* Estilos para los elementos con clase .peliculas */
+.peliculas {
     margin-inline: 200px;
     display: flex;
     flex-wrap: wrap;
@@ -246,39 +264,41 @@ hr {
     align-items: center;
 }
 
-#tendencias h2{
+/* Estilos para el título dentro de #tendencias */
+#tendencias h2 {
     display: flex;
     justify-content: center;
     margin: 20px;
 }
 
-#tendencias .botones{
+/* Estilos para el contenedor con clase .botones dentro de #tendencias */
+#tendencias .botones {
     display: flex;
     justify-content: center;
 }
 
-#tendencias button{
+/* Estilos para los botones dentro de #tendencias */
+#tendencias button {
     border: 1px solid white;
     margin: 20px;
 }
 
-#aclamadas{
+/* Estilos para el contenedor #aclamadas */
+#aclamadas {
     padding-bottom: 20px;
 }
 
-#aclamadas h2{
+/* Estilos para el título h2 dentro de #aclamadas */
+#aclamadas h2 {
     display: flex;
     justify-content: center;
     margin-top: 10px;
 }
 
-#aclamadas .container-aclamadas{
+/* Estilos para el contenedor con clase .container-aclamadas dentro de #aclamadas */
+#aclamadas .container-aclamadas {
     display: flex;
     flex-direction: row;
-    overflow-x: scroll;
+    overflow-x: scroll; /* Estilo para la barra de desplazamiento horizontal */
     margin-inline: 5%;
-}
-
-::-webkit-scrollbar-track {
-    background-color: rgb(209, 76, 24);
 }
