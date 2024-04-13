@@ -111,7 +111,6 @@ button{
     background-color: rgb(209, 76, 24);
     border: none;
     border-radius: 5px;
-    padding: 10px;
     transition: all 0.5s ease;
 }
 /* agranda un poco los botones al poner el cursos sobre ellos */
