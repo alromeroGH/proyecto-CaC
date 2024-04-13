@@ -37,6 +37,12 @@
         padding: 1%;
         justify-content: center;
     }
+    /* Efecto de desenfoque y reducción de tamaño al pasar el cursor sobre las imágenes de #tendencias */
+#tendencias div a:hover {
+    filter: blur(10px);
+    transform: scale(0.9, 0.9);
+    transition: all 0.5s ease;
+}
     /* Estilos para el formulario de búsqueda en la barra de navegación */
     #buscador form input {
         width: 500px;
@@ -240,13 +246,6 @@ hr {
     border-radius: 10px;
     width: 300px;
     padding: 20px;
-}
-
-/* Efecto de desenfoque y reducción de tamaño al pasar el cursor sobre las imágenes de #tendencias */
-#tendencias div a:hover {
-    filter: blur(10px);
-    transform: scale(0.9, 0.9);
-    transition: all 0.5s ease;
 }
 
 /* Estilos para elementos con clase .pelicula */
