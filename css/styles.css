@@ -83,11 +83,17 @@
         border-radius: 30px;
     }
     /* se cambia color hipervinculos y se quita la barra que tiene debajo, disminuye tamaño letra para movil */
-    a{
+    .navbar a{
         color: white;
         font-size: 12px;
         text-decoration: none;
     }
+    a{
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+        padding: 4px;
+      }
 }
 /* ajusta tamaño logo de navbar */
 .logo a img{
