@@ -164,7 +164,7 @@ hr {
 }
 
 #buscador form input{
-    width: 600px;
+    width: 500px;
     padding: 15px;
     border: none;
     border-radius: 30px;
@@ -173,7 +173,7 @@ hr {
 #buscador form button{
     border: 1px solid white;
     border-radius: 30px;
-    margin-left: 5px;
+    margin: 10px;
 }
 .nombre{
     display: flex;
