@@ -40,6 +40,12 @@
         border: none;
         border-radius: 30px;
     }
+    /* se cambia color hipervinculos y se quita la barra que tiene debajo, aumenta tamaño letra para pc */
+    a{
+      color: white;
+     font-size: 20px;
+      text-decoration: none;
+    }
 }
 
 @media (max-width: 640px) {
@@ -76,6 +82,12 @@
         border: none;
         border-radius: 30px;
     }
+    /* se cambia color hipervinculos y se quita la barra que tiene debajo, disminuye tamaño letra para movil */
+    a{
+        color: white;
+        font-size: 12px;
+        text-decoration: none;
+    }
 }
 /* ajusta tamaño logo de navbar */
 .logo a img{
@@ -93,12 +105,6 @@ ul li{
     padding-inline: 20px;
     list-style: none;
     padding-top: 5px;
-}
-/* se cambia color hipervinculos y se quita la barra que tiene debajo */
-a{
-    color: white;
-    font-size: 20px;
-    text-decoration: none;
 }
 /* se le pone a los botones el mismo color que las barras, se quita el borde y se le da radio */
 button{
