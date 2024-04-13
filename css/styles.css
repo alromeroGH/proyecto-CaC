@@ -32,6 +32,13 @@
         padding: 1%;
         justify-content: center;
     }
+
+    #buscador form input{
+        width: 500px;
+        padding: 15px;
+        border: none;
+        border-radius: 30px;
+    }
 }
 
 @media (max-width: 640px) {
@@ -60,6 +67,12 @@
         padding: 1%;
         flex-direction: column;
         align-items: center;
+    }
+    #buscador form input{
+        width: 300px;
+        padding: 15px;
+        border: none;
+        border-radius: 30px;
     }
 }
 /* ajusta tamaño logo de navbar */
@@ -158,13 +171,6 @@ hr {
 
 #buscador form{
     margin-top: 20px;
-}
-
-#buscador form input{
-    width: 500px;
-    padding: 15px;
-    border: none;
-    border-radius: 30px;
 }
 
 #buscador form button{
