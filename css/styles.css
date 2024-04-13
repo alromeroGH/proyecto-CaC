@@ -46,10 +46,23 @@
      font-size: 20px;
       text-decoration: none;
     }
+    /* se le pone a los botones el mismo color que las barras, se quita el borde y se le da radio, se aumenta el tamaño en pc */
+    button{
+        background-color: rgb(209, 76, 24);
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        transition: all 0.5s ease;
+    }
+
+    #aclamadas div img{
+        padding: 30px;
+        border-radius: 50px;
+    }
 }
 
 @media (max-width: 640px) {
-    /* BreakPoint de la barra de navegación para pantallas de movil */
+    /* BreakPoint de la barra de navegación para pantallas de movile */
     .logo{
         background-color: rgb(209, 76, 24);
         width: 100%;
@@ -64,7 +77,7 @@
         justify-content: center;
         padding: 1%;
     }
-    /* BreakPoint del footer para pantallas de movil */
+    /* BreakPoint del footer para pantallas de movile */
     .container-footer ul{
         background-color: rgb(209, 76, 24);
         display: flex;
@@ -82,7 +95,7 @@
         border: none;
         border-radius: 30px;
     }
-    /* se cambia color hipervinculos y se quita la barra que tiene debajo, disminuye tamaño letra para movil */
+    /* se cambia color hipervinculos y se quita la barra que tiene debajo, disminuye tamaño letra para movile */
     .navbar a{
         color: white;
         font-size: 12px;
@@ -94,6 +107,20 @@
         text-decoration: none;
         padding: 4px;
       }
+    /* se le pone a los botones el mismo color que las barras, se quita el borde y se le da radio, se disminuye el tamaño en movile */
+    button{
+        background-color: rgb(209, 76, 24);
+        border: none;
+        border-radius: 5px;
+        transition: all 0.5s ease;
+    }
+
+    #aclamadas div img{
+        padding-right: 10px;
+        border-radius: 50px;
+        height: 230px;
+        width: 180px;
+    }
 }
 /* ajusta tamaño logo de navbar */
 .logo a img{
@@ -111,13 +138,6 @@ ul li{
     padding-inline: 20px;
     list-style: none;
     padding-top: 5px;
-}
-/* se le pone a los botones el mismo color que las barras, se quita el borde y se le da radio */
-button{
-    background-color: rgb(209, 76, 24);
-    border: none;
-    border-radius: 5px;
-    transition: all 0.5s ease;
 }
 /* agranda un poco los botones al poner el cursos sobre ellos */
 button:hover{
@@ -141,7 +161,7 @@ main{
 
 h2{
     color: white;
-    font-size: 45px;
+    font-size: 40px;
 }
 
 hr {
@@ -240,4 +260,25 @@ hr {
 #tendencias button{
     border: 1px solid white;
     margin: 20px;
+}
+
+#aclamadas{
+    padding-bottom: 20px;
+}
+
+#aclamadas h2{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#aclamadas .container-aclamadas{
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    margin-inline: 5%;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(209, 76, 24);
 }
