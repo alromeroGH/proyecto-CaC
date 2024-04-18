@@ -38,13 +38,13 @@
         justify-content: center;
     }
     /* Efecto de desenfoque y reducción de tamaño al pasar el cursor sobre las imágenes de #tendencias */
-#tendencias div a:hover {
+.tendencias div a:hover {
     filter: blur(10px);
     transform: scale(0.9, 0.9);
     transition: all 0.5s ease;
 }
     /* Estilos para el formulario de búsqueda en la barra de navegación */
-    #buscador form input {
+    .buscador form input {
         width: 500px;
         padding: 15px;
         border: none;
@@ -65,7 +65,7 @@
         transition: all 0.5s ease;
     }
     /* Estilos para las imágenes dentro de #aclamadas */
-    #aclamadas div img {
+    .aclamadas div img {
         padding: 30px;
         border-radius: 50px;
     }
@@ -101,7 +101,7 @@
         align-items: center;
     }
     /* Estilos para el formulario de búsqueda en dispositivos móviles */
-    #buscador form input {
+    .buscador form input {
         width: 300px;
         padding: 15px;
         border: none;
@@ -128,7 +128,7 @@
         transition: all 0.5s ease;
     }
     /* Estilos para las imágenes dentro de #aclamadas en dispositivos móviles */
-    #aclamadas div img {
+    .aclamadas div img {
         padding-right: 10px;
         border-radius: 50px;
         height: 230px;
@@ -196,7 +196,7 @@ hr {
 }
 
 /* Estilos para el contenedor con id "introduccion" */
-#introduccion {
+.introduccion {
     background-image: url(../imagenes/fondo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -208,20 +208,20 @@ hr {
 }
 
 /* Estilos para las etiquetas h1 dentro de #introduccion */
-#introduccion h1 {
+.introduccion h1 {
     color: white;
     font-size: 70px;
 }
 
 /* Estilos para las etiquetas p dentro de #introduccion */
-#introduccion p {
+.introduccion p {
     color: white;
     font-size: 40px;
     margin: 5px;
 }
 
 /* Estilos para el contenedor con id "buscador" */
-#buscador {
+.buscador {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -230,12 +230,12 @@ hr {
 }
 
 /* Estilos adicionales para el formulario dentro de #buscador */
-#buscador form {
+.buscador form {
     margin-top: 20px;
 }
 
 /* Estilos para el botón dentro del formulario en #buscador */
-#buscador form button {
+.buscador form button {
     border: 1px solid white;
     border-radius: 30px;
     margin: 10px;
@@ -249,7 +249,7 @@ hr {
 }
 
 /* Estilos para las imágenes dentro de #tendencias */
-#tendencias div a img {
+.tendencias div a img {
     border-radius: 10px;
     width: 300px;
     padding: 20px;
@@ -272,38 +272,38 @@ hr {
 }
 
 /* Estilos para el título dentro de #tendencias */
-#tendencias h2 {
+.tendencias h2 {
     display: flex;
     justify-content: center;
     margin: 20px;
 }
 
 /* Estilos para el contenedor con clase .botones dentro de #tendencias */
-#tendencias .botones {
+.tendencias .botones {
     display: flex;
     justify-content: center;
 }
 
 /* Estilos para los botones dentro de #tendencias */
-#tendencias button {
+.tendencias button {
     border: 1px solid white;
     margin: 20px;
 }
 
 /* Estilos para el contenedor #aclamadas */
-#aclamadas {
+.aclamadas {
     padding-bottom: 20px;
 }
 
 /* Estilos para el título h2 dentro de #aclamadas */
-#aclamadas h2 {
+.aclamadas h2 {
     display: flex;
     justify-content: center;
     margin-top: 10px;
 }
 
 /* Estilos para el contenedor con clase .container-aclamadas dentro de #aclamadas */
-#aclamadas .container-aclamadas {
+.aclamadas .container-aclamadas {
     display: flex;
     flex-direction: row;
     overflow-x: scroll; /* Estilo para la barra de desplazamiento horizontal */
