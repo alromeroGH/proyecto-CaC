@@ -1,0 +1,36 @@
+/* .container-film{
+    margin-top: 100px;
+} */
+
+.detalle-film{
+    height: 60vh;
+    width: 100vw;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../imagenes/fondo.jpg);
+
+    display: flex;
+    justify-content: center;
+}
+
+.film-box{
+    width: 160vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.film-box>img{
+    height: 450px;
+    width: 300px;
+    border-radius: 20px;
+}
+
+.direccion-film{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
