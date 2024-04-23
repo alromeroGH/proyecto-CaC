@@ -1,8 +1,20 @@
-/* .container-film{
-    margin-top: 100px;
-} */
+*{
+    color:aliceblue
+}
 
-.detalle-film{
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+}
+
+.block{
+    /* background-color: blue; */
+    width: 100%;
+    height: 83px;
+}
+
+.detalle-section{
     height: 60vh;
     width: 100vw;
 
@@ -13,6 +25,8 @@
 
     display: flex;
     justify-content: center;
+
+    position: relative;
 }
 
 .film-box{
@@ -20,17 +34,107 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    position: absolute;
+    top: 40px;
 }
 
 .film-box>img{
     height: 450px;
     width: 300px;
     border-radius: 20px;
+
+    transition: 500ms;
+}
+
+.film-box>img:hover{
+    height: 470px;
+    width: 320px;
 }
 
 .direccion-film{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+}
+.direccion-film div p, 
+.direccion-film div h1{
+    transition: 500ms;
+}
+.direccion-film div:hover p,
+.direccion-film div:hover h1{
+    font-size: 28px;
+}
+
+.description-film{
+    margin-left: 40px;
+}
+
+@media (max-width: 940px) {
+    .film-box{
+        flex-direction: column;
+    }
+    .description-film{
+        margin-top: 40px;
+    }
+    .film-box>img{
+        height: 300px;
+        width: 200px;
+    }
+    .film-box>img:hover{
+        height: 320px;
+        width: 220px;
+    }
+
+    .trailer-section{
+        margin-top: 100px;
+    }
+    .trailer-section .container-trailer{
+        flex-direction: column;
+    }
+}
+
+/* ////////// Seccion del Trailer ////////// */
+
+.trailer-section{
+    height: 60vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.container-trailer{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+}
+
+strong{
+    font-size: 20px;
+}
+td{
+    padding-left: 20px;
+}
+table{
+    border-spacing: 10px;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px ;
+}
+.icons a svg path{
+    fill: aliceblue;
+}
+.icons a svg{
+    transition: 500ms;
+}
+.icons a svg:hover{
+    height: 60px;
+    width: 60px;
 }
 
