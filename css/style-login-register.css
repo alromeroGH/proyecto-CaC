@@ -237,7 +237,7 @@ input[type='submit']:hover{
 }
 
 
-/* ENLACE: ¿NECESITAS AYUDA? Y REGISTRARSE*/
+/* ENLACE: ¿NECESITAS AYUDA? Y REGISTRARSE */
 .container-form form a{
     margin: 20px;
     text-align: center;
@@ -260,7 +260,7 @@ input:focus, select:focus{
 }
 
 
-/* Animacion para contenedor de formulario al cargar pagina */
+/* ANIMACION PARA CONTENEDOR DE FORMULARIO AL CARGAR PAGINA */
 @keyframes formulario {
     from{
         scale: 0.5;
