@@ -151,7 +151,7 @@ button:hover {
 }
 
 
-/*FONDO*/
+/* FONDO */
 body{
     background: url(../imagenes/fondo.jpg);  
     background-size: contain;
@@ -260,7 +260,7 @@ input:focus, select:focus{
 }
 
 
-/* Animacion para contenedor de formulario al cargar pagina*/
+/* Animacion para contenedor de formulario al cargar pagina */
 @keyframes formulario {
     from{
         scale: 0.5;
@@ -273,7 +273,7 @@ input:focus, select:focus{
 }
 
 
-/* DIMENSIONES PARA PC FORMULARIO REGISTRO*/
+/* DIMENSIONES PARA PC FORMULARIO REGISTRO */
 @media (min-width:640px) {
 
     body{
