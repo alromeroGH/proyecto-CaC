@@ -7,12 +7,8 @@ main{
     flex-direction: column;
     gap: 200px;
 }
-footer{
-    margin: 0px;
-}
 
 .block{
-    /* background-color: blue; */
     width: 100%;
     height: 83px;
 }
@@ -24,7 +20,7 @@ footer{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-image: url(../imagenes/fondo.jpg);
+    background-image: url(../imagenes/1366_2000.png);
 
     display: flex;
     justify-content: center;
@@ -107,8 +103,9 @@ footer{
     display: flex;
     justify-content: center;
 
+    overflow-y: scroll;
+    scrollbar-width: none;
 }
-
 
 .container-trailer{
     display: flex;
