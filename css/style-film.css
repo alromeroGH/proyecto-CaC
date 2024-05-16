@@ -6,6 +6,9 @@ main{
     display: flex;
     flex-direction: column;
     gap: 200px;
+
+    overflow-y: scroll;
+    scrollbar-width: none;
 }
 
 .block{
@@ -103,8 +106,8 @@ main{
     display: flex;
     justify-content: center;
 
-    overflow-y: scroll;
-    scrollbar-width: none;
+    /* overflow-y: scroll;
+    scrollbar-width: none; */
 }
 
 .container-trailer{
