@@ -246,12 +246,13 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 200px;
 }
 
 /* Estilos para las imágenes dentro de #tendencias */
 .tendencias div a img {
     border-radius: 10px;
-    width: 300px;
+    width: 200px;
     padding: 20px;
 }
 
