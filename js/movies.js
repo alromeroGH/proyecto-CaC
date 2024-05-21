@@ -1,57 +1,78 @@
-let apiKey = '44d03bcbc2bc43b1c81acd014f727c91';
-let paginaActual =  1;
+let apiKey = '44d03bcbc2bc43b1c81acd014f727c91'; // Clave de API para acceder a TMDB
+let paginaActual = 1; // Número de página actual para la paginación
 
-function llamarApi(){
+// Función para llamar a la API de películas Discover
+function llamarApiDiscover() {
     fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&page=${paginaActual}`)
         .then(response => response.json())
-        .then(data => dibujarDatos(data));
+        .then(data => dibujarDatosDiscover(data))
+        .catch(error => console.error('Error al llamar la API Discover:', error));
 }
 
-function dibujarDatos(json){
-    const filas1 = json.results.map(objeto => filaTendencia(objeto));
-    document.getElementById('peliculas').innerHTML = filas1.join('');
-    const filas2 = json.results.map(objeto => filaAclamada(objeto));
-    document.getElementById('aclamadas').innerHTML = filas2.join('');
+// Función para llamar a la API de películas Populares
+function llamarApiPopular() {
+    fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&page=50`)
+        .then(response => response.json())
+        .then(data => dibujarDatosPopular(data))
+        .catch(error => console.error('Error al llamar la API Popular:', error));
+}
+
+// Función para dibujar datos de la API Discover
+function dibujarDatosDiscover(json) {
+    const filas = json.results.map(objeto => filaTendencia(objeto));
+    document.getElementById('peliculas').innerHTML = filas.join('');
     
     // Añadir event listeners a las imágenes de tendencia
     agregarEventListenersTooltip(document.querySelectorAll('#peliculas img'));
+}
+
+// Función para dibujar datos de la API Popular
+function dibujarDatosPopular(json) {
+    const filas = json.results.map(objeto => filaAclamada(objeto));
+    document.getElementById('aclamadas').innerHTML = filas.join('');
+    
     // Añadir event listeners a las imágenes aclamadas
     agregarEventListenersTooltip(document.querySelectorAll('#aclamadas img'));
 }
 
-function filaTendencia(objeto){
+// Función para crear el HTML de una fila de tendencia
+function filaTendencia(objeto) {
     const baseUrl = 'https://image.tmdb.org/t/p/w300'; 
-    return`
+    return `
     <div class="pelicula">
         <a href="film.html">
             <img src="${baseUrl}${objeto.poster_path}" alt="${objeto.title}" data-title="${objeto.title}">
             <div id="tooltip" class="nombre"></div>
-            </a>
+        </a>
     </div>
     `;
 }
 
-function filaAclamada(objeto){
+// Función para crear el HTML de una fila aclamada
+function filaAclamada(objeto) {
     const baseUrl = 'https://image.tmdb.org/t/p/w200'; 
-    return`
+    return `
     <div>
         <img src="${baseUrl}${objeto.poster_path}" alt="${objeto.title}" data-title="${objeto.title}">
     </div>
     `;
 }
 
-function siguientePagina(){
+// Función para ir a la siguiente página de la API Discover
+function siguientePagina() {
     paginaActual++;
-    llamarApi();
+    llamarApiDiscover();
 }
 
-function anteriorPagina(){
-    if(paginaActual > 1){
+// Función para ir a la página anterior de la API Discover
+function anteriorPagina() {
+    if (paginaActual > 1) {
         paginaActual--;
     }
-    llamarApi();
+    llamarApiDiscover();
 }
 
+// Función para agregar event listeners a las imágenes para mostrar tooltips
 function agregarEventListenersTooltip(imagenes) {
     const tooltip = document.getElementById('tooltip');
 
@@ -74,8 +95,11 @@ function agregarEventListenersTooltip(imagenes) {
     });
 }
 
-llamarApi();
+// Inicializar llamadas a las APIs Discover y Popular al cargar la página
+llamarApiDiscover();
+llamarApiPopular();
 
+// Añadir event listeners a los botones de paginación
 const btnSiguiente = document.getElementById('btnSiguiente');
 const btnAnterior = document.getElementById('btnAnterior');
 
