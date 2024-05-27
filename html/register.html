@@ -40,19 +40,19 @@
             <!-- TITULO FORMULARIO -->
             <h2>Registro</h2> 
             <!-- FORMULARIO -->
-            <form action="" class="form-register"> 
+            <form action="" id="form" class="form-register"> 
                 <!-- NOMBRE -->
-                <input type="text" placeholder="Nombre" required> 
+                <input type="text" id="nombre" placeholder="Nombre" required> 
                 <!-- APELLIDO -->
-                <input type="text" placeholder="Apellido" required> 
+                <input type="text" id="apellido" placeholder="Apellido" required> 
                 <!-- CORREO ELECTRONICO -->
-                <input type="email" name="" id="" placeholder="Email" required> 
+                <input type="email" name="" id="email" placeholder="Email" required> 
                 <!-- CONTRASEÑA -->
-                <input type="password" name="" id="" placeholder="Contraseña" required> 
+                <input type="password" name="" id="pass" placeholder="Contraseña" required> 
                 <!-- FECHA DE NACIMIENTO -->
-                <input type="date" name="" id="" required> 
+                <input type="date" name="" id="fecha" required> 
                 <!-- LISTADO: PAIS DE NACIMIENTO -->
-                <select name="" id="" required> 
+                <select name="" id="pais" required> 
                     <option value="#">País</option>
                     <option value="argentina">Argentina</option>
                     <option value="bolivia">Bolivia</option>
@@ -74,6 +74,10 @@
                 <input type="submit" value="Registrarse"> 
                 <!-- PSEUDO ENLACE A SITIO PARA AYUDA -->
                 <a href="#">¿Necesitas ayuda?</a>   
+
+                <div id="error">
+                    <p id="textError"></p>
+                </div>
 
             </form>
 
