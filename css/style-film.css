@@ -75,25 +75,37 @@ main{
 
 @media (max-width: 940px) {
     .film-box{
+        display: flex;
         flex-direction: column;
     }
     .description-film{
+        display: flex;
         margin-top: 40px;
     }
     .film-box>img{
+        display: flex;
         height: 300px;
         width: 200px;
     }
     .film-box>img:hover{
+        display: flex;
         height: 320px;
         width: 220px;
     }
-
+    .desc{
+        display: flex;
+    }
     .trailer-section{
+        display: flex;
         margin-top: 100px;
     }
     .trailer-section .container-trailer{
+        display: flex;
         flex-direction: column;
+    }
+    .direccion-film div h1,p{
+        display: inline-block;
+
     }
 }
 

@@ -1,0 +1,323 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'MadimiOne';
+}
+
+/* ESTILOS PARA BARRA DE NAVEGACION EXTRAIDOS DEL ARCHIVO CSS PARA INDEX*/
+
+
+@media (min-width: 640px) {
+
+
+    /* Estilos para pantallas de PC */
+    .container {
+        /* Estilos de la barra de navegación */
+        background-color: rgb(209, 76, 24);
+        width: 100%;
+        padding: 1%;
+        position: fixed;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        top: 0;
+        z-index: 10;
+    }
+
+    /* Estilos para los hipervínculos */
+    .container a {
+      color: white;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+
+     /* Estilos para los botones */
+    button {
+        background-color: rgb(209, 76, 24);
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        transition: all 0.5s ease;
+    } 
+}
+
+
+
+
+
+
+
+
+@media (max-width: 640px) {
+    /* Estilos para pantallas de dispositivos móviles */
+    .logo {
+        /* Estilos del logo en la barra de navegación */
+        background-color: rgb(209, 76, 24);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 1%;
+    }
+    .navbar {
+        /* Estilos de la barra de navegación */
+        background-color: rgb(209, 76, 24);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 1%;
+    }
+
+    /* Estilos para los hipervínculos en dispositivos móviles */
+    .navbar a {
+        color: white;
+        font-size: 15px;
+        text-decoration: none;
+    }
+
+    /* Estilos para los botones en dispositivos móviles */
+    button {
+        background-color: rgb(209, 76, 24);
+        border: none;
+        padding: 5px;
+        border-radius: 5px;
+        transition: all 0.5s ease;
+    }
+}
+
+
+/* Estilos adicionales */
+
+/* Ajuste de tamaño del logo en la barra de navegación */
+.logo a img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Animación para el logo en la barra de navegación */
+.logo a img:hover {
+    transform: rotate(30deg);
+    transition: all 0.5s ease;
+}
+
+/* Estilos para las listas */
+ul li {
+    display: inline-block;
+    padding-inline: 20px;
+    list-style: none;
+    padding-top: 5px;
+}
+
+/* Efecto de agrandamiento en botones al pasar el cursor sobre ellos */
+button:hover {
+    transform: scale(1.1, 1.1);
+}
+
+/* Estilos específicos para el botón con clase .boton2 */
+.boton2 {
+    background-color: rgb(12, 8, 7);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* Cambio de color de texto al pasar el cursor sobre el botón con clase .boton2 */
+.boton2 a:hover {
+    color: rgb(209, 76, 24);
+    transition: all 0.7s ease;
+}
+
+
+
+
+/* **************************************************************************************** */
+
+/* ESTILOS PARA FORMULARIOS DE INICIAR SESION Y REGISTRO */
+
+
+
+/* Definición de la fuente personalizada 'MadimiOne' */
+@font-face {
+    font-family: 'MadimiOne';
+    src: url(../fonts/MadimiOne-Regular/MadimiOne-Regular.ttf);
+}
+
+*{
+    font-family: 'MadimiOne';
+}
+
+
+/* FONDO */
+body{
+    background: url(../imagenes/fondo.jpg);  
+    background-size: contain;
+    transition: background .5s;
+    padding: 0;
+    margin: 0;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+
+/* TITULO H2 : "REGISTRO" */
+h2{
+    text-align: center;
+    margin: 0;
+    font-size: 2em;
+}
+
+
+/* CONTENEDOR DEL FORMULARIO */
+.container-form.register, .login{
+    background-color: rgb(42, 42, 42);
+    color: white;
+    padding: 120px 15% 120px 15%;
+    margin: 10px 2% 0 2%;
+    border-radius: 10px;
+    animation: formulario 1.2s;
+    animation-delay: 0s;
+    transition: all 0.5s;
+}
+
+
+/* FORMULARIO */
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* TEXTO PLACEHOLDER DE LOS INPUT */
+input::placeholder{
+    color: rgb(158, 158, 158);
+}
+
+
+/* ESTILOS PARA SELECT E INPUT, EXCEPTO CHECKBOX DE TERMINOS Y CONDICIONES */
+select,input:not(label>input){
+    margin-top: 18px;
+    padding: 8px 8px 8px 20px;
+    border: 2px solid rgb(209, 76, 24);
+    border-radius: 18px;
+    background-color: #333333;
+    color: white;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+
+/* TERMINOS Y CONDICIONES */
+.checkbox{
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: .8em;
+}
+
+
+/* BOTON DE REGISTRARSE E INICIAR SESION */
+input[type='submit']{
+    border-radius: 10px;
+    background-color: rgb(209, 76, 24);
+    color: white;
+    padding: 15px;
+    margin: 25px 25px 0 25px ;
+    font-size: .8em;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+}
+
+
+/* AL PASAR EL CURSOR ENCIMA DEL BOTON DE REGISTRARSE */
+input[type='submit']:hover{
+    box-shadow: 0 0 15px rgb(209, 76, 24);
+}
+
+
+/* ENLACE: ¿NECESITAS AYUDA? Y REGISTRARSE */
+.container-form form a{
+    margin: 20px;
+    text-align: center;
+    color: rgb(158, 158, 158);
+    text-decoration: none;
+    font-size: .8em;
+}
+
+
+/* AL PASAR EL CURSOR ENCIMA DE UN INPUT O SELECT */
+input:hover, select:hover{
+    box-shadow: 0 0 5px rgb(209, 76, 24);
+}
+
+
+/* INPUT SELECCIONADO, SELECT SELECCIONADO */
+input:focus, select:focus{
+    box-shadow: 0 0 15px rgb(209, 76, 24);
+    outline: none;
+}
+
+
+/* ANIMACION PARA CONTENEDOR DE FORMULARIO AL CARGAR PAGINA */
+@keyframes formulario {
+    from{
+        scale: 0.5;
+        opacity: 0;
+    }
+    to{
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+
+/* DIMENSIONES PARA PC FORMULARIO REGISTRO */
+@media (min-width:640px) {
+
+    body{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+
+    header{
+        position: static;
+        margin-bottom: 100px;
+    }
+
+
+    .container-form.register{
+        margin: 120px auto 0;
+        width: 45vw;
+        padding: 100px 5% 100px;
+        position: relative;
+    }
+
+}
+
+/* PARA PANTALLAS DE ANCHO ENTRE 640PX Y 900PX, ADEMAS DE ACTIVAR SCROLL VERTICAL POR SI EL ANCHO ES GRANDE Y EL ALTO NO */
+@media (width>900px){
+    body{
+        overflow: visible;
+    }
+    .container-form.register{
+        width: 40vw;
+    }
+}
+
+/* ESTILOS ESPECIALES PARA LOGIN EN PC*/
+@media (min-width:1200px){
+
+    .container-form.login{
+        margin: 120px auto 0;
+        width: 30vw;
+        padding: 220px 5% 220px;
+        position: relative;
+    }
+
+}
