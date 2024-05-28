@@ -243,15 +243,20 @@ hr {
 
 /* Estilos para elementos con clase .nombre */
 .nombre {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: none;
+    z-index: 1000;
+    white-space: wrap;
+    position: absolute;
+    color: rgb(209, 76, 24);
 }
 
 /* Estilos para las imágenes dentro de #tendencias */
 .tendencias div a img {
     border-radius: 10px;
-    width: 300px;
+    width: 200px;
     padding: 20px;
 }
 
