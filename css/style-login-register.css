@@ -321,3 +321,11 @@ input:focus, select:focus{
     }
 
 }
+
+/* **************************************************************************************** */
+
+/* ESTILOS PARA EL PARRAFO DE ERRORES */
+
+#error{
+    color: red;
+}

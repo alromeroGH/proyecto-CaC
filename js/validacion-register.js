@@ -26,9 +26,10 @@ form.addEventListener("submit", e=>{
     if(!validarPass(pass.value)){
         txtError += `Contraseña no valida <br>`
     }
-    if(!validarPais(pais.value)){
+    /* if(!validarPais(pais.value)){
         txtError += `Seleccione un Pais <br>`
-    }
+    } */
+
 
     textError.innerHTML = txtError
   
@@ -37,7 +38,7 @@ form.addEventListener("submit", e=>{
 //-----------------------------------------------
 
 function validarNombre(nom){
-    if(nom.length > 3){
+    if(nom.length < 4){
         return true
     }
 
@@ -61,10 +62,16 @@ function validarPass(passw){
     return false
 }
 
-function validarPais(country){
+/* function validarPais(country){
     if(country!= "País"){
         return true
     }
     return false
-}
+} */
 
+/* function validarFecha(date){
+    if(date != ){
+        return true
+    }
+    return false
+} */
