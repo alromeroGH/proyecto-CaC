@@ -10,11 +10,11 @@ const form = document.getElementById("form")
 
 form.addEventListener("submit", e=>{
     e.preventDefault()
-    let txtError = "error"
+    let txtError = ""
 
-    alert("Hola Mundo")
 
-    /* if(!validarNombre(nombre.value)){
+
+    if(!validarNombre(nombre.value)){
         txtError += `Nombre no valido <br>`
     }
     if(!validarNombre(apellido.value)){
@@ -26,8 +26,11 @@ form.addEventListener("submit", e=>{
     if(!validarPass(pass.value)){
         txtError += `Contraseña no valida <br>`
     }
+    if(!validarPais(pais.value)){
+        txtError += `Seleccione un Pais <br>`
+    }
 
-    textError.innerHTML = txtError */
+    textError.innerHTML = txtError
   
 })
 
@@ -57,3 +60,11 @@ function validarPass(passw){
     }
     return false
 }
+
+function validarPais(country){
+    if(country!= "País"){
+        return true
+    }
+    return false
+}
+
