@@ -12,37 +12,44 @@ form.addEventListener("submit", e=>{
     e.preventDefault()
     let txtError = ""
 
-
-
-    if(!validarNombre(nombre.value)){
-        txtError += `Nombre no valido <br>`
+    if(validarNombre(nombre.value) == 1){
+        txtError += `Ingrese un Nombre <br>`
+    }else if(validarNombre(nombre.value) == 2){
+        txtError += `El nombre es muy corto <br>`
     }
-    if(!validarNombre(apellido.value)){
-        txtError += `Apellido no valido <br>`
+    if(validarNombre(apellido.value) == 1){
+        txtError += `Ingrese un Apellido <br>`
+    }else if(validarNombre(apellido.value) == 2){
+        txtError += `El apellido es muy corto <br>`
     }
+
     if(!validarEmail(email.value)){
         txtError += `Email no valido <br>`
     }
     if(!validarPass(pass.value)){
         txtError += `Contraseña no valida <br>`
     }
-    /* if(!validarPais(pais.value)){
+    if(!validarPais(pais.value)){
         txtError += `Seleccione un Pais <br>`
-    } */
-
+    }
+    if(!validarFecha(fecha.value)){
+        txtError += `Ingrese una Fecha <br>`
+    }
 
     textError.innerHTML = txtError
-  
+
 })
 
 //-----------------------------------------------
 
 function validarNombre(nom){
-    if(nom.length < 4){
-        return true
+    if(nom == ""){
+        return 1
     }
-
-    return false
+    if(nom.length < 4){
+        return 2
+    }
+    return 3
 }
 
 function validarEmail(mail){
@@ -62,16 +69,16 @@ function validarPass(passw){
     return false
 }
 
-/* function validarPais(country){
-    if(country!= "País"){
+function validarPais(country){
+    if(country!= "#"){
         return true
     }
     return false
-} */
+}
 
-/* function validarFecha(date){
-    if(date != ){
+function validarFecha(date){
+    if(date != ""){
         return true
     }
     return false
-} */
+}
