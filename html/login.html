@@ -41,11 +41,21 @@
             <!-- TITULO FORMULARIO -->
             <h2>Iniciar Sesión</h2> 
             <!-- FORMULARIO -->
-            <form action="" class="formulario"> 
+            <form action="" id="form" class="formulario"> 
                 <!-- CORREO ELECTRONICO -->
-                <input type="email" name="" id="" placeholder="Email" required> 
+                <input type="email" name="" id="email" placeholder="Email" required> 
+
+                <div id="error">
+                    <p id="textError_email"></p>
+                </div>
+
                 <!-- CONTRASEÑA -->
-                <input type="password" name="" id="" placeholder="Contraseña" required> 
+                <input type="password" name="" id="pass" placeholder="Contraseña" required> 
+
+                <div id="error">
+                    <p id="textError_pass"></p>
+                </div>
+
                 <!-- BOTON INICIAR SESION -->
                 <input type="submit" value="Iniciar Sesión"> 
                 <!-- ENLACE A SECCION REGISTRO -->
@@ -58,6 +68,7 @@
     </main>
 
 
+    <script src="../js/validacion-login.js"></script>
 </body>
 
 </html>

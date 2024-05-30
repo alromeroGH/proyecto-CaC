@@ -40,19 +40,47 @@
             <!-- TITULO FORMULARIO -->
             <h2>Registro</h2> 
             <!-- FORMULARIO -->
-            <form action="" class="form-register"> 
+            <form action="" id="form" class="form-register"> 
                 <!-- NOMBRE -->
-                <input type="text" placeholder="Nombre" required> 
+                <input type="text" id="nombre" placeholder="Nombre" >
+                
+                <div id="error">
+                    <p id="textError_nombre"></p>
+                </div>  
+
                 <!-- APELLIDO -->
-                <input type="text" placeholder="Apellido" required> 
+
+                <input type="text" id="apellido" placeholder="Apellido" > 
+                
+                <div id="error">
+                    <p id="textError_apellido"></p>
+                </div> 
                 <!-- CORREO ELECTRONICO -->
-                <input type="email" name="" id="" placeholder="Email" required> 
+
+                <input type="text" name="" id="email" placeholder="Email" > 
+                
+                <div id="error">
+                    <p id="textError_email"></p>
+                </div> 
+
                 <!-- CONTRASEÑA -->
-                <input type="password" name="" id="" placeholder="Contraseña" required> 
+                
+                <input type="password" name="" id="pass" placeholder="Contraseña" > 
+                
+                <div id="error">
+                    <p id="textError_pass"></p>
+                </div>
+
                 <!-- FECHA DE NACIMIENTO -->
-                <input type="date" name="" id="" required> 
+                
+                <input type="date" name="" id="fecha" > 
+                
+                <div id="error">
+                    <p id="textError_fecha"></p>
+                </div> 
+                
                 <!-- LISTADO: PAIS DE NACIMIENTO -->
-                <select name="" id="" required> 
+                <select name="" id="pais" required> 
                     <option value="#">País</option>
                     <option value="argentina">Argentina</option>
                     <option value="bolivia">Bolivia</option>
@@ -65,6 +93,9 @@
                     <option value="Uruguay">Uruguay</option>
                     <option value="Venezuela">Venezuela</option>
                 </select>
+                <div id="error">
+                    <p id="textError_pais"></p>
+                </div> 
                 <!-- TERMINOS Y CONDICIONES -->
                 <label for="terminos-y-condiciones" class="checkbox">   
                     <input type="checkbox" name="" id="terminos-y-condiciones" required>
@@ -75,11 +106,15 @@
                 <!-- PSEUDO ENLACE A SITIO PARA AYUDA -->
                 <a href="#">¿Necesitas ayuda?</a>   
 
+                
+                    
+               
+
             </form>
 
         </div>
     
     </main>
-
+    <script src="../js/validacion-register.js"></script>
 </body>
 </html>
