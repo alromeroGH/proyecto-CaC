@@ -42,15 +42,43 @@
             <!-- FORMULARIO -->
             <form action="" id="form" class="form-register"> 
                 <!-- NOMBRE -->
-                <input type="text" id="nombre" placeholder="Nombre" required> 
+                <input type="text" id="nombre" placeholder="Nombre" >
+                
+                <div id="error">
+                    <p id="textError_nombre"></p>
+                </div>  
+
                 <!-- APELLIDO -->
-                <input type="text" id="apellido" placeholder="Apellido" required> 
+
+                <input type="text" id="apellido" placeholder="Apellido" > 
+                
+                <div id="error">
+                    <p id="textError_apellido"></p>
+                </div> 
                 <!-- CORREO ELECTRONICO -->
-                <input type="email" name="" id="email" placeholder="Email" required> 
+
+                <input type="text" name="" id="email" placeholder="Email" > 
+                
+                <div id="error">
+                    <p id="textError_email"></p>
+                </div> 
+
                 <!-- CONTRASEÑA -->
-                <input type="password" name="" id="pass" placeholder="Contraseña" required> 
+                
+                <input type="password" name="" id="pass" placeholder="Contraseña" > 
+                
+                <div id="error">
+                    <p id="textError_pass"></p>
+                </div>
+
                 <!-- FECHA DE NACIMIENTO -->
-                <input type="date" name="" id="fecha" required> 
+                
+                <input type="date" name="" id="fecha" > 
+                
+                <div id="error">
+                    <p id="textError_fecha"></p>
+                </div> 
+                
                 <!-- LISTADO: PAIS DE NACIMIENTO -->
                 <select name="" id="pais" required> 
                     <option value="#">País</option>
@@ -65,6 +93,9 @@
                     <option value="Uruguay">Uruguay</option>
                     <option value="Venezuela">Venezuela</option>
                 </select>
+                <div id="error">
+                    <p id="textError_pais"></p>
+                </div> 
                 <!-- TERMINOS Y CONDICIONES -->
                 <label for="terminos-y-condiciones" class="checkbox">   
                     <input type="checkbox" name="" id="terminos-y-condiciones" required>
@@ -75,9 +106,9 @@
                 <!-- PSEUDO ENLACE A SITIO PARA AYUDA -->
                 <a href="#">¿Necesitas ayuda?</a>   
 
-                <div id="error">
-                    <p id="textError"></p>
-                </div>
+                
+                    
+               
 
             </form>
 
