@@ -5,40 +5,88 @@ const pass = document.getElementById("pass")
 const fecha = document.getElementById("fecha")
 const pais = document.getElementById("pais")
 
-const textError = document.getElementById("textError")
+// AGREGADO
+const textErrorNombre = document.getElementById("textError_nombre")
+const textErrorApellido = document.getElementById("textError_apellido")
+const textErrorEmail = document.getElementById("textError_email")
+const textErrorPass = document.getElementById("textError_pass")
+const textErrorPais = document.getElementById("textError_pais")
+const textErrorFecha = document.getElementById("textError_fecha")
+// 
+
 const form = document.getElementById("form")
 
 form.addEventListener("submit", e=>{
     e.preventDefault()
-    let txtError = ""
 
+    // 
+    let txtErrorn= ""
+    let txtErrora= ""
+    let txtErrore= ""
+    let txtErrorps= ""
+    let txtErrorpais= ""
+    let txtErrorf= ""
+    // 
+
+    // MODIFICADO
     if(validarNombre(nombre.value) == 1){
-        txtError += `Ingrese un Nombre <br>`
+        txtErrorn+= `Ingrese un Nombre <br>`
+        textErrorNombre.innerHTML = txtErrorn
     }else if(validarNombre(nombre.value) == 2){
-        txtError += `El nombre es muy corto <br>`
+        txtErrorn+= `El nombre es muy corto <br>`
+        textErrorNombre.innerHTML = txtErrorn
     }
+    else if(validarNombre(nombre.value) == 3){
+        textErrorNombre.innerHTML = txtErrorn
+    }
+
     if(validarNombre(apellido.value) == 1){
-        txtError += `Ingrese un Apellido <br>`
+        txtErrora+= `Ingrese un Apellido <br>`
+        textErrorApellido.innerHTML = txtErrora
     }else if(validarNombre(apellido.value) == 2){
-        txtError += `El apellido es muy corto <br>`
+        txtErrora+= `El apellido es muy corto <br>`
+        textErrorApellido.innerHTML = txtErrora
+    }
+    else if (validarNombre(apellido.value) == 3) {
+        textErrorApellido.innerHTML = txtErrora
     }
 
     if(!validarEmail(email.value)){
-        txtError += `Email no valido <br>`
+        txtErrore+= `Email no valido <br>`
+        textErrorEmail.innerHTML = txtErrore
     }
+    else if(validarEmail(email.value)){
+        textErrorEmail.innerHTML = txtErrore
+    }
+
     if(!validarPass(pass.value)){
-        txtError += `Contraseña no valida <br>`
+        txtErrorps+= `Contraseña no valida <br>`
+        textErrorPass.innerHTML = txtErrorps
     }
+    else if(validarPass(pass.value)){
+        textErrorPass.innerHTML = txtErrorps
+    }
+
     if(!validarPais(pais.value)){
-        txtError += `Seleccione un Pais <br>`
+        txtErrorpais+= `Seleccione un Pais <br>`
+        textErrorPais.innerHTML = txtErrorpais
     }
+    else if(validarPais(pais.value)){
+        textErrorPais.innerHTML = txtErrorpais
+    }
+
     if(!validarFecha(fecha.value)){
-        txtError += `Ingrese una Fecha <br>`
+        txtErrorf+= `Ingrese una Fecha <br>`
+        textErrorFecha.innerHTML = txtErrorf
+    }
+    else if(validarFecha(fecha.value)){
+        textErrorFecha.innerHTML = txtErrorf
     }
 
-    textError.innerHTML = txtError
-
+    
 })
+    // 
+
 
 //-----------------------------------------------
 
@@ -82,3 +130,7 @@ function validarFecha(date){
     }
     return false
 }
+
+
+// --------------------------------------------------------------
+
