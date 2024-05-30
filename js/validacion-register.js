@@ -22,12 +22,16 @@ form.addEventListener("submit", e=>{
     let txtErrorpais= ""
     let txtErrorf= ""
 
+    let esValido = true
+
     if(validarNombre(nombre.value) == 1){
         txtErrorn+= `Ingrese un Nombre <br>`
         textErrorNombre.innerHTML = txtErrorn
+        esValido = false;
     }else if(validarNombre(nombre.value) == 2){
         txtErrorn+= `El nombre es muy corto <br>`
         textErrorNombre.innerHTML = txtErrorn
+        esValido = false;
     }
     else if(validarNombre(nombre.value) == 3){
         textErrorNombre.innerHTML = txtErrorn
@@ -36,9 +40,11 @@ form.addEventListener("submit", e=>{
     if(validarNombre(apellido.value) == 1){
         txtErrora+= `Ingrese un Apellido <br>`
         textErrorApellido.innerHTML = txtErrora
+        esValido = false;
     }else if(validarNombre(apellido.value) == 2){
         txtErrora+= `El apellido es muy corto <br>`
         textErrorApellido.innerHTML = txtErrora
+        esValido = false;
     }
     else if (validarNombre(apellido.value) == 3) {
         textErrorApellido.innerHTML = txtErrora
@@ -47,6 +53,7 @@ form.addEventListener("submit", e=>{
     if(!validarEmail(email.value)){
         txtErrore+= `Email no valido <br>`
         textErrorEmail.innerHTML = txtErrore
+        esValido = false;
     }
     else if(validarEmail(email.value)){
         textErrorEmail.innerHTML = txtErrore
@@ -55,6 +62,7 @@ form.addEventListener("submit", e=>{
     if(!validarPass(pass.value)){
         txtErrorps+= `Contraseña no valida <br>`
         textErrorPass.innerHTML = txtErrorps
+        esValido = false;
     }
     else if(validarPass(pass.value)){
         textErrorPass.innerHTML = txtErrorps
@@ -63,6 +71,7 @@ form.addEventListener("submit", e=>{
     if(!validarPais(pais.value)){
         txtErrorpais+= `Seleccione un Pais <br>`
         textErrorPais.innerHTML = txtErrorpais
+        esValido = false;
     }
     else if(validarPais(pais.value)){
         textErrorPais.innerHTML = txtErrorpais
@@ -71,11 +80,15 @@ form.addEventListener("submit", e=>{
     if(!validarFecha(fecha.value)){
         txtErrorf+= `Ingrese una Fecha <br>`
         textErrorFecha.innerHTML = txtErrorf
+        esValido = false;
     }
     else if(validarFecha(fecha.value)){
         textErrorFecha.innerHTML = txtErrorf
     }
 
+    if(esValido){
+        form.submit()
+    }
     
 })
 
