@@ -42,7 +42,7 @@ function filaTendencia(objeto) {
     <div class="pelicula">
         <a href="film.html">
             <img src="${baseUrl}${objeto.poster_path}" alt="${objeto.title}" data-title="${objeto.title}">
-            <div id="tooltip" class="nombre"></div>
+            
         </a>
     </div>
     `;
