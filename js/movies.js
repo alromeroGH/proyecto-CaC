@@ -40,7 +40,7 @@ function filaTendencia(objeto) {
     const baseUrl = 'https://image.tmdb.org/t/p/w300'; 
     return `
     <div class="pelicula">
-        <a href="film.html">
+        <a href="html/film.html">
             <img src="${baseUrl}${objeto.poster_path}" alt="${objeto.title}" data-title="${objeto.title}">
             
         </a>
